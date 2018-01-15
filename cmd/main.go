@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/stpdevelo/go-simple/pkg/app"
+	"github.com/stpdevelo/go-simple-project/pkg/app"
 )
 
 func main() {
