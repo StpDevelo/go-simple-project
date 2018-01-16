@@ -16,7 +16,8 @@ import (
 )
 
 var (
-	TmplIndex = parserTemplate("index.tmpl", "app.tmpl", "layout.tmpl")
+	tmplIndex    = parserTemplate("index.tmpl", "app.tmpl", "layout.tmpl")
+	tmplNotFound = parserTemplate("not-found.tmpl", "app.tmpl", "layout.tmpl")
 )
 
 var (
@@ -89,7 +90,6 @@ func renderWithStatusCode(w http.ResponseWriter, code int, t *tmpl, data interfa
 	}
 }
 
-// Render is render func for view
-func Render(w http.ResponseWriter, t *tmpl, data interface{}) {
+func render(w http.ResponseWriter, t *tmpl, data interface{}) {
 	renderWithStatusCode(w, http.StatusOK, t, data)
 }
